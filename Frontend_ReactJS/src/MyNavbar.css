@@ -1,0 +1,67 @@
+/* Ensure the navbar is always at the top of the page */
+.navbar {
+  margin: 0;
+  width: 100%;
+  position: fixed;      /* Makes the navbar sticky (remains at the top) */
+  top: 0;               /* Stick it to the top */
+  left: 0;              /* Stick it to the left */
+  z-index: 1000;       /* Ensure it's on top of other content */
+  background: linear-gradient(145deg, #ca7632, #b7f075); /* Gradient for 3D effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Styling for the brand name */
+.navbar-brand {
+  font-weight: bold;     /* Make the brand name bold */
+  font-size: 5rem;     /* Adjust the size of the brand */
+  color: white !important; /* Ensure the brand text is white */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+/* Align the brand "DIGITAL MENU CARD" to the left */
+.navbar-brand-left {
+  margin-right: auto;    /* Push the brand to the left */
+}
+
+/* Styling for the links */
+.navbar-nav .nav-link {
+  color: rgb(250, 0, 0) !important;    /* Ensure the navigation links are white */
+  font-size: 2.5rem;          /* Set font size for links */
+  margin: 0 15px;             /* Add horizontal spacing between links */
+  text-decoration: none;      /* Remove underline from links */
+  position: relative;         /* To create 3D effect */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+/* Styling for the navigation link container */
+.navbar-nav {
+  display: flex;              /* Make sure the links are aligned horizontally */
+  justify-content: center;    /* Center the links */
+  align-items: center;        /* Vertically align the links */
+  flex-grow: 1;               /* Ensure it takes up available space for center alignment */
+}
+
+/* Link hover effect */
+.navbar-nav .nav-link:hover {
+  color: #f1eded;             /* Lighten the color on hover */
+  text-decoration: underline; /* Optional: Add underline on hover */
+  transform: translateY(-3px); /* Slightly move the link up */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;        /* Reduce font size on smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: rem;          /* Reduce link size on smaller screens */
+    margin: 0 10px;           /* Adjust margin for smaller screens */
+  }
+
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
